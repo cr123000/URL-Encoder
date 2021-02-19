@@ -9,16 +9,11 @@ namespace URLEncoder
             {"{", "%7B"}, {"}", "%7D"}, {"|", "%7C"}, {"\\", "%5C"}, {"^", "%5E"}, 
             {"[", "%5B"}, {"]", "%5D"}, {"`", "%60"}};
         public static int leng=bannedCharacters.GetLength(0);
-        /*static char[] makeReferenceArray(string[,] array){
-            char[] reference='';
-            for(int i=0;i<leng;i++){
-                reference[i]=bannedCharacters[i,0][0];
-            }
-        }*/
         static void Main(string[] args)
             {
                 URL_Encoder URL=new URL_Encoder();
                 Console.WriteLine(URL.output);
+                Console.ReadLine();// I use the external console in VSCode as I have been getting errors when using the internal so I put a readline statement just to read output.
             }
 
         class URL_Encoder{
@@ -28,7 +23,7 @@ namespace URLEncoder
             public URL_Encoder(){
                     project=GetProject();
                     activity=GetActivity();
-                    output=Encode(project,activity);
+                    output=makeOutput(project,activity);
             }
             static Boolean isValidInput(string input){
                 foreach(char character in input){
@@ -56,28 +51,27 @@ namespace URLEncoder
                     Console.Write("The input contains invalid characters.");
                 } while (true);
             }
-            static string Encode(string project1,string activity1){
-                //"https://companyserver.com/content/{project1}/files/{activity1}/{activity1}Report.pdf";
-                string URL="";
-                string projectName=project1;
-                string activityName=activity1;
-                char[] projArray=project1.ToCharArray();
-                char[] actArray=activity1.ToCharArray();
+            static string Encode(string data){
+                char[] array=data.ToCharArray();
+                string encoded="";
                 int counter=0;
-                URL+="https://companyserver.com/content/";
-                Boolean x=true;
-                foreach(char character in projArray){
+                foreach(char character in array){
+                    Boolean x=true;
                     for(int i=0;i<leng;i++){
                         if(character==bannedCharacters[i,0][0]){
-                            URL+=bannedCharacters[i,1]; 
+                            encoded+=bannedCharacters[i,1]; 
                             x=false;
-                            break;
                         }
                     }
-                    if(x) URL+=character;
+                    if(x) encoded+=character;
                     counter++;
                 }
-                return URL;
+                return encoded;
+            }
+            static string makeOutput(string project1, string activity1){
+                string projectE=Encode(project1);
+                string activityE=Encode(activity1);
+                return $"https://companyserver.com/content/{projectE}/files/{activityE}/{activityE}Report.pdf";
             }
         }    
     }
