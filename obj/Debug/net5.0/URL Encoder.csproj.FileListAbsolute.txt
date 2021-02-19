@@ -1,0 +1,16 @@
+B:\Desktop\CSIT\C#\URL Encoder\bin\Debug\net5.0\URL Encoder.exe
+B:\Desktop\CSIT\C#\URL Encoder\bin\Debug\net5.0\URL Encoder.deps.json
+B:\Desktop\CSIT\C#\URL Encoder\bin\Debug\net5.0\URL Encoder.runtimeconfig.json
+B:\Desktop\CSIT\C#\URL Encoder\bin\Debug\net5.0\URL Encoder.runtimeconfig.dev.json
+B:\Desktop\CSIT\C#\URL Encoder\bin\Debug\net5.0\URL Encoder.dll
+B:\Desktop\CSIT\C#\URL Encoder\bin\Debug\net5.0\ref\URL Encoder.dll
+B:\Desktop\CSIT\C#\URL Encoder\bin\Debug\net5.0\URL Encoder.pdb
+B:\Desktop\CSIT\C#\URL Encoder\obj\Debug\net5.0\URL Encoder.csprojAssemblyReference.cache
+B:\Desktop\CSIT\C#\URL Encoder\obj\Debug\net5.0\URL Encoder.GeneratedMSBuildEditorConfig.editorconfig
+B:\Desktop\CSIT\C#\URL Encoder\obj\Debug\net5.0\URL Encoder.AssemblyInfoInputs.cache
+B:\Desktop\CSIT\C#\URL Encoder\obj\Debug\net5.0\URL Encoder.AssemblyInfo.cs
+B:\Desktop\CSIT\C#\URL Encoder\obj\Debug\net5.0\URL Encoder.csproj.CoreCompileInputs.cache
+B:\Desktop\CSIT\C#\URL Encoder\obj\Debug\net5.0\URL Encoder.dll
+B:\Desktop\CSIT\C#\URL Encoder\obj\Debug\net5.0\ref\URL Encoder.dll
+B:\Desktop\CSIT\C#\URL Encoder\obj\Debug\net5.0\URL Encoder.pdb
+B:\Desktop\CSIT\C#\URL Encoder\obj\Debug\net5.0\URL Encoder.genruntimeconfig.cache
