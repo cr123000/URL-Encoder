@@ -1,0 +1,5 @@
+Questions
+can I have all the code run through the innit statement in the class?- I didn't call any methods and that feels weird to me. Is there a standard thing I am messing up here?
+Should my menu options and stuff be inside the encoder class?
+Are my comments ok?
+Can I change the settings on the json file or will that mess up grading?
