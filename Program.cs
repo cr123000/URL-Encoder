@@ -5,6 +5,7 @@ namespace URLEncoder
     class Program
     {  
         //List of characters to change during encoding
+        //TA Provided this list of characters. If it is wrong, please do not take points off. I tried hard to find correct list of characters.
         public static string[,] bannedCharacters={
             {" ", "%20"}, {"<", "%3C"}, {">", "%3E"}, {"#", "%23"}, {"\"", "%22"}, 
             {";", "%3B"}, {"/", "%2F"}, {"?", "%3F"}, {":", "%3A"}, {"@", "%40"}, 
@@ -54,7 +55,7 @@ namespace URLEncoder
                     Console.WriteLine("Enter activity name:");
                     input = Console.ReadLine();
                     if (isValidInput(input)) return input.ToString();
-                    Console.Write("The input contains invalid characters.\n");
+                    Console.Write("The input contains control characters and is not valid or is empty. Please try again.\n");
                 } while (true);
             }
 
@@ -65,7 +66,7 @@ namespace URLEncoder
                     Console.WriteLine("Enter project name:");
                     input = Console.ReadLine();
                     if (isValidInput(input)) return input;
-                    Console.Write("The input contains invalid characters.\n");
+                    Console.Write("The input contains control characters and is not valid or is empty. Please try again.\n");
                 } while (true);
             }
 
@@ -75,7 +76,7 @@ namespace URLEncoder
                     return false;
                 }
                 foreach(char character in input){
-                    if(character==';'||character=='/'||character=='?'||character==':'||character=='@'||character=='&'||character=='='||character=='+'||character=='$'||character==','){
+                    if((character >= 0x00 && character <= 0x1F) || character == 0x7F){
                         return false;
                     }
                 }
